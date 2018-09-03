@@ -7,16 +7,16 @@ const request = require('request-promise-native');
 class Cleverbot {
   /**
   * @param {Object} options Options for initializing the cleverbot.js library.
-  * @param {APIKey} options.APIKey The Cleverbot API Key.
+  * @param {String} options.APIKey The Cleverbot API Key.
   * @param {Boolean} options.preserveState Whether to preserve the state of the
   * conversations.
   * @example
   * const Cleverbot = require('cleverbot.js');
-  * let options = {
+  * const options = {
   *   APIKey: 'CFDoi4234falFOFaSfwepxXhBRW',
   *   preserveState: true
   * };
-  * cleverbot = new Cleverbot(options);
+  * const cleverbot = new Cleverbot(options);
   */
   constructor(options) {
     this.options = options && typeof options === 'object' ? options : {};
@@ -27,7 +27,7 @@ class Cleverbot {
   }
 
   /**
-   * Generates the path for the API request for the given messaage from user.
+   * Generates the path for the API request for the given message from user.
    * @function _getPath
    * @param {String} message The message sent by the user.
    * @returns {String} The path of the API request.
@@ -47,8 +47,8 @@ class Cleverbot {
   }
 
   /**
-   * Generates the path for the API request for the given messaage from user.
-   * @function _getPath
+   * Write a message to Cleverbot.
+   * @function write
    * @param {String} message The message sent by the user.
    * @returns {String} The Cleverbot response object.
    * @example
