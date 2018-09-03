@@ -1,5 +1,5 @@
 const qs = require('querystring');
-const got = require('got');
+const request = require('request-promise-native');
 
 /**
  * @class Cleverbot
@@ -60,16 +60,15 @@ class Cleverbot {
    */
   async write(message) {
     try {
+      let url = `https://www.cleverbot.com${this._getPath(message)}`;
       let options = {
-        host: 'www.cleverbot.com',
-        path: this._getPath(message),
         headers: {
           'Content-Type': 'application/json',
           'User-Agent': 'cleverbot.js'
         }
       };
 
-      let response = await got(options);
+      let response = await request(url, options);
       if (response) {
         if (response.statusCode === 200) {
           response.body = JSON.parse(response.body);
