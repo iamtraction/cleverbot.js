@@ -1,6 +1,9 @@
 # cleverbot.js
 A [Node.js](https://nodejs.org) Cleverbot API wrapper library. Go make a chat bot in a flash!
 
+It supports both [cleverbot.com](https://cleverbot.com) and
+[cleverbot.io](https://cleverbot.io)
+
 [![GitHub release](https://img.shields.io/github/release/k3rn31p4nic/cleverbot.js.svg?style=flat)](https://github.com/k3rn31p4nic/cleverbot.js/releases)
 [![Dependencies](https://david-dm.org/k3rn31p4nic/cleverbot.js.svg)](https://david-dm.org/k3rn31p4nic/cleverbot.js)
 [![Known Vulnerabilities](https://snyk.io/test/github/k3rn31p4nic/cleverbot.js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/k3rn31p4nic/cleverbot.js?targetFile=package.json)
@@ -29,7 +32,7 @@ $ npm install cleverbot.js --save
 ## Usage
 ### Constructor
 ```js
-new Cleverbot();
+new Cleverbot.com(options);
 ```
 | Parameter | Type | Optional | Default | Description |
 | - | - | - | - | - |
@@ -45,13 +48,44 @@ let options = {
   APIKey: 'CFDoi4234falFOFaSfwepxXhBRW',
   preserveState: true
 };
-cleverbot = new Cleverbot(options);
+cleverbot = new Cleverbot.com(options);
 
 cleverbot.write('Hi how\'re you?').then(response => {
-  console.log(response.output); // Fine, How're you?
+  console.log(response.output); // Fine, how're you?
 }).catch(e => {
   console.error(e);
 });
+```
+
+### Constructor
+```js
+new Cleverbot.io(options);
+```
+| Parameter | Type | Optional | Default | Description |
+| - | - | - | - | - |
+| `options` | `Object` | ❌ | - | The options for initializing cleverbot.js |
+| `options.APIUser` | `String` | ❌ | - | The API user that you got from the [cleverbot website](https://www.cleverbot.io/keys) |
+| `options.APIKey` | `String` | ❌ | - | The API key that you got from the [cleverbot website](https://www.cleverbot.io/keys) |
+
+#### Example
+
+```js
+const Cleverbot = require('cleverbot.js');
+let options = {
+  APIUser: 'FaSfwepxX34falFO',
+  APIKey: 'CFDoi4234falFOFaSfwepxXhBRW'
+};
+cleverbot = new Cleverbot.io(options);
+
+cleverbot.init().then(nick => {
+  cleverbot.write('Hi how\'re you?', nick).then(response => {
+    console.log(response.output); // Good, and you?
+  }).catch(e => {
+    console.error(e);
+  });
+}).catch(e => {
+  console.error(e);
+})
 ```
 
 ## Contributors
