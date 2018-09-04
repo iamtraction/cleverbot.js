@@ -32,7 +32,7 @@ class CleverbotIO {
    * @returns {String} The Cleverbot response object.
    * @example
    * cleverbot.write('Hi how\'re you?').then(response => {
-   *   console.log(response.output); // Fine, How're you?
+   *   console.log(response.output); // Good, and you?
    * }).catch(e => {
    *   console.error(e);
    * });
@@ -80,7 +80,7 @@ class CleverbotIO {
    * initialized. `null` otherwise.
    * @example
    * cleverbot.init('k3rn31p4nic').then(response => {
-   *   console.log(response); // true
+   *   console.log(response); // 'k3rn31p4nic'
    * }).catch(e => {
    *   console.error(e);
    * });

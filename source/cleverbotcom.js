@@ -53,7 +53,7 @@ class CleverbotCOM {
    * @returns {String} The Cleverbot response object.
    * @example
    * cleverbot.write('Hi how\'re you?').then(response => {
-   *   console.log(response.output); // Fine, How're you?
+   *   console.log(response.output); // Fine, how're you?
    * }).catch(e => {
    *   console.error(e);
    * });
