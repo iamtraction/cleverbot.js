@@ -16,7 +16,7 @@ class CleverbotCOM {
   *   APIKey: 'CFDoi4234falFOFaSfwepxXhBRW',
   *   preserveState: true
   * };
-  * const cleverbot = new Cleverbot(options);
+  * const cleverbot = new Cleverbot.com(options);
   */
   constructor(options) {
     this.options = options && typeof options === 'object' ? options : {};

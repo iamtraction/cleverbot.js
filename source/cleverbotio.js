@@ -14,7 +14,7 @@ class CleverbotIO {
   *   APIUser: 'aSflWCFDoi4F3BRpxXwe4faOFh2',
   *   APIKey: 'CFDoi4234falFOFaSfwepxXhBRW'
   * };
-  * cleverbot = new Cleverbot(options);
+  * cleverbot = new Cleverbot.io(options);
   */
   constructor(options) {
     this.options = options && typeof options === 'object' ? options : {};
