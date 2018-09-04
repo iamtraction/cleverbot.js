@@ -2,9 +2,9 @@ const qs = require('querystring');
 const request = require('request-promise-native');
 
 /**
- * @class Cleverbot
+ * @class CleverbotCOM
  */
-class Cleverbot {
+class CleverbotCOM {
   /**
   * @param {Object} options Options for initializing the cleverbot.js library.
   * @param {String} options.APIKey The Cleverbot API Key.
@@ -97,4 +97,4 @@ class Cleverbot {
   }
 }
 
-module.exports = Cleverbot;
+module.exports = CleverbotCOM;

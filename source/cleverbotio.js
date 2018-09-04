@@ -1,9 +1,9 @@
 const request = require('request-promise-native');
 
 /**
- * @class Cleverbot
+ * @class CleverbotIO
  */
-class Cleverbot {
+class CleverbotIO {
   /**
   * @param {Object} options Options for initializing the cleverbot.js library.
   * @param {String} options.APIUser The Cleverbot API User.
@@ -117,4 +117,4 @@ class Cleverbot {
   }
 }
 
-module.exports = Cleverbot;
+module.exports = CleverbotIO;
