@@ -2,7 +2,7 @@
   "name": "cleverbot.js",
   "version": "1.0.1",
   "description": "A Node.js Cleverbot API wrapper library. Go make a chat bot in a flash!",
-  "main": "source/cleverbot.js",
+  "main": "index.js",
   "scripts": {
     "test:lint": "./node_modules/.bin/eslint .",
     "test": "npm run test:lint && exit 0"
