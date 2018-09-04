@@ -1,4 +1,4 @@
 module.exports = {
-  com: require('./source/cleverbot'),
+  com: require('./source/cleverbotcom'),
   io: require('./source/cleverbotio')
 };
