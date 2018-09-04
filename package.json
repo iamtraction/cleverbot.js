@@ -1,6 +1,6 @@
 {
   "name": "cleverbot.js",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A Node.js Cleverbot API wrapper library. Go make a chat bot in a flash!",
   "main": "index.js",
   "scripts": {
