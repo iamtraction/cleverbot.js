@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:lint": "./node_modules/.bin/eslint .",
-    "test": "npm run test:lint && exit 0"
+    "test": "npm run test:lint && exit 0",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -32,9 +34,11 @@
   "homepage": "https://github.com/k3rn31p4nic/cleverbot.js#readme",
   "dependencies": {
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "eslint": "^5.5.0"
-  }
+  },
+  "snyk": true
 }
